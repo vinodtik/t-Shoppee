@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" *ngFor="let menu of menulist">
-                <a class="nav-link" routerLink="{{ menu | lowercase }}">{{ menu }}</a>
+                <a class="nav-link" [class.text-primary]="menu == 'Login'" routerLink="{{ menu | lowercase }}">{{ menu }}</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

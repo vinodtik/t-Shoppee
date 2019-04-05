@@ -13,7 +13,7 @@ export class ProductDetailsComponent implements OnInit {
 
     prodId:number
     singleproduct:any
-    
+
     constructor(private route: ActivatedRoute, private productservice:FeaturedProductService) { }
 
     ngOnInit() { 
@@ -26,7 +26,7 @@ export class ProductDetailsComponent implements OnInit {
 
         this.productservice.getSingleProduct(this.prodId).subscribe(result =>{
             this.singleproduct = result;
-            // console.log(this.singleproduct);
+            console.log(this.singleproduct);
         })
     }
 
