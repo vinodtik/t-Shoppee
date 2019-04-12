@@ -12,7 +12,7 @@ export class FeaturedProductService {
     }
 
     getAllProducts():Observable<any>{
-        return this.httpclient.get('https://jsonplaceholder.typicode.com/photos/?_limit=50');
+        return this.httpclient.get('https://jsonplaceholder.typicode.com/photos/?_limit=30');
     }
 
     getSingleProduct(id:number):Observable<any>{

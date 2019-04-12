@@ -11,6 +11,9 @@ import { TrimStringPipe } from './shared/trim.pipe';
 import { ProductsComponent } from './products/products.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ProductDetailsComponent } from './products/productdetails/productdetails.component';
+import { CartComponent } from './cart/cart.component';
+import { CartbuttonComponent } from './cartbutton/cartbutton.component';
+import { CartService } from './shared/cart.service';
 
 @NgModule({
   declarations: [
@@ -21,13 +24,18 @@ import { ProductDetailsComponent } from './products/productdetails/productdetail
     LatestProductComponent,
     TrimStringPipe,
     ProductsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent,
+    CartbuttonComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers:[
+    CartService
+  ]
 })
 export class AppModule { }

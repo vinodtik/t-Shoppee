@@ -12,6 +12,7 @@ import { FeaturedProductService } from '../shared/featuredproduct.service';
 export class ProductsComponent implements OnInit {
 
     productlist : any
+    singleProduct : any
     constructor(private productservice:FeaturedProductService) { }
 
     ngOnInit() { 
